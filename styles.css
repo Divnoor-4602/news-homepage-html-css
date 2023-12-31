@@ -1,0 +1,38 @@
+/* primary
+- Soft orange: hsl(35, 77%, 62%)
+- Soft red: hsl(5, 85%, 63%)
+ */
+
+/* secondary
+    Off-white: hsl(36, 100%, 99%)
+Grayish blue: hsl(233, 8%, 79%)
+Dark grayish blue: hsl(236, 13%, 42%)
+Very dark blue: hsl(240, 100%, 5%)
+ */
+
+body {
+  font-family: "Inter";
+  margin: 2rem;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  gap: 3rem;
+}
+
+.nav-links-container {
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+}
+
+.nav-item {
+  opacity: 50%;
+}
+
+.nav-item:hover {
+  color: hsl(5, 85%, 63%);
+  opacity: 100%;
+  cursor: pointer;
+}
