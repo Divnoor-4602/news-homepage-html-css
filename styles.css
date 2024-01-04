@@ -180,6 +180,31 @@ body {
 }
 
 #main-text {
+  display: block;
+  color: hsl(236, 13%, 42%);
+  line-height: 1.5rem;
+  font-size: 0.95rem;
+}
+
+.read-more-button {
+  background-color: hsl(5, 85%, 63%);
+  color: white;
+  padding: 0.8rem 2rem;
+  border: 0;
+  letter-spacing: 0.3rem;
+  box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px,
+    rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+  border-radius: 0.5rem;
+  margin-top: 1.5rem;
+}
+
+.main-content-items:nth-child(3) {
+  margin-top: 0.5rem;
+}
+
+.article-section {
+  background-color: hsl(240, 100%, 5%);
+  color: white;
 }
 
 @media (min-width: 750px) {
