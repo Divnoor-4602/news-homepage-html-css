@@ -20,7 +20,9 @@ Very dark blue: hsl(240, 100%, 5%)
 
 body {
   font-family: "Inter";
-  margin: 2rem;
+  margin-top: 3rem;
+  margin-right: 5rem;
+  margin-left: 5rem;
 }
 
 hr {
@@ -51,8 +53,10 @@ hr {
   cursor: pointer;
 }
 
-.grid-container {
-  margin-top: 1rem;
+.main-content-container {
+  display: grid;
+  gap: 1rem;
+  margin-top: 3rem;
 }
 
 .read-more {
@@ -170,7 +174,10 @@ hr {
 
 .web3-image-container {
   margin-top: 2.5rem;
-  width: 85vw;
+  height: 50vh;
+  background-image: url("./assets/images/image-web-3-mobile.jpg");
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 
 .web3-image {
@@ -192,6 +199,7 @@ hr {
 }
 
 .read-more-button {
+  transition: transform var(--animation-time);
   background-color: hsl(5, 85%, 63%);
   color: white;
   padding: 0.8rem 2rem;
@@ -200,7 +208,11 @@ hr {
   box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px,
     rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
   border-radius: 0.5rem;
-  margin-top: 1.5rem;
+  margin-top: 0.75rem;
+}
+
+.read-more-button:hover {
+  transform: scale(1.1);
 }
 
 .main-content-items:nth-child(3) {
@@ -214,7 +226,6 @@ hr {
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  margin-top: 3.2rem;
 }
 
 .article-section-item {
@@ -240,8 +251,8 @@ hr {
 
 .reccomendation-container {
   display: flex;
+  flex-direction: column;
   row-gap: 2rem;
-  margin-top: 2.5rem;
 }
 
 .recommendation-image {
@@ -271,6 +282,10 @@ hr {
   font-weight: 500;
 }
 
+.grid-span-2 {
+  grid-column: span 2;
+}
+
 @media (min-width: 750px) {
   .nav-links-container {
     display: flex;
@@ -282,5 +297,47 @@ hr {
 
   .side-menu {
     display: none;
+  }
+
+  .web3-image-container {
+    background-image: url("./assets/images/image-web-3-desktop.jpg");
+    height: 35vh;
+    background-size: 100% 100%;
+    margin-top: 0;
+  }
+
+  .main-content-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .main-content-items:first-child {
+    grid-column: span 2;
+  }
+
+  .main-content-items:nth-child(4) {
+    grid-column-start: 3;
+    grid-row: 1 / span 2;
+  }
+
+  #web3-main-text {
+    font-size: 3rem;
+  }
+
+  .main-content-items:last-child {
+    grid-column: 1 / span 3;
+  }
+
+  .reccomendation-container {
+    flex-direction: row;
+    justify-content: space-between;
+    column-gap: 1rem;
+  }
+
+  .reccomendation-description {
+    width: 20rem;
+  }
+
+  .reccomendation-image {
+    padding-right: 1rem;
   }
 }
